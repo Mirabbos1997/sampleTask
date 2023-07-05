@@ -1,0 +1,9 @@
+.Button {
+  text-align: center;
+}
+
+.SigninLang {
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+}

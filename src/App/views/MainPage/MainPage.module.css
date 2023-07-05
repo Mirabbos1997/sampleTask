@@ -1,0 +1,35 @@
+.svg-wrapper {
+  text-align: center;
+}
+
+.svg-map {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  stroke-width: 1px;
+  stroke: white;
+  width: 50vw;
+  overflow: visible !important;
+  fill: #5e7297;
+}
+
+.region-svg-map {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  stroke-width: 1px;
+  stroke: white;
+  overflow: visible !important;
+  fill: #5e7297;
+  width: 30vw;
+  height: auto;
+  max-height: 60vh;
+  position: relative;
+  bottom: 80px;
+}
+
+/* .region {
+  fill: #3f4d6799;
+} */
+
+.region:hover {
+  fill: #3f4d67;
+}
