@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { Form, Input, Button, Select, Modal } from "antd";
+import { Form, Input, Button, Select } from "antd";
 import Fade from 'react-reveal/Fade';
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
@@ -33,12 +33,14 @@ const SignIn = (props) => {
     setLoading(true);
     SigninService.signin(values)
       .then((response) => {
-        console.log(response);
+        // console.log(response.json());
+        // const token = response.data.token;
+        // console.log(`Token: ${token}`);
         if (response.status === 200 && response.data.token) {
           localStorage.setItem("token", response.data.token);
           // localStorage.setItem("userInfo", JSON.stringify(response.data.userinfo));
           setSignedIn(true);
-        } 
+        }
       })
       .catch((error) => {
         Notification('error', error);

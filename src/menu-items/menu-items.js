@@ -35,62 +35,6 @@ const menuItems = {
           icon: "feather icon-list",
           children: [
             {
-              id: "Contractors",
-              title: "Contractors",
-              type: "item",
-              url: "/Contractors",
-              role: 'ContractorView'
-            },
-            {
-              id: "contracts",
-              title: "contracts",
-              type: "item",
-              url: "/contracts",
-              role: 'ContractView'
-            },
-            {
-              id: "PermanentAsset",
-              title: "PermanentAsset",
-              type: "item",
-              url: "/PermanentAsset",
-              role: 'PermanentAssetView'
-            },
-            {
-              id: "SubAcc",
-              title: "SubAcc",
-              type: "item",
-              url: "/SubAcc",
-              role: 'SubAccView'
-            },
-            {
-              id: "InventoryHolding",
-              title: "InventoryHolding",
-              type: "item",
-              url: "/InventoryHolding",
-              role: 'SubAccView'
-            },
-            {
-              id: "ResponsiblePerson",
-              title: "ResponsiblePerson",
-              type: "item",
-              url: "/ResponsiblePerson",
-              role: 'ResponsiblePersonView'
-            },
-            {
-              id: "ConstantValue",
-              title: "ConstantValue",
-              type: "item",
-              url: "/ConstantValue",
-              role: 'ConstantValueView'
-            },
-            {
-              id: "Children",
-              title: "Children",
-              type: "item",
-              url: "/Children",
-              role: 'ChildrenView'
-            },
-            {
               id: "Department",
               title: "Department",
               type: "item",
@@ -103,13 +47,6 @@ const menuItems = {
               type: "item",
               url: "/Employee",
               role: 'UserView'
-            },
-            {
-              id: "OrganizationsSettlementAccount",
-              title: "OrganizationsSettlementAccount",
-              type: "item",
-              url: "/OrganizationsSettlementAccount",
-              role: 'OrganizationsSettlementAccountView'
             },
           ],
         },

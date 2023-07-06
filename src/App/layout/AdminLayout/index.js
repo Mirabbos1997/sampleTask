@@ -40,26 +40,13 @@ class AdminLayout extends Component {
   }
 
   render() {
-    let routeItems = mainRoutes;
+    // let routeItems = mainRoutes;
 
-    const filteredRoutes = routeItems.filter(item => {
-      return (JSON.parse(localStorage.getItem('userInfo')).Roles.includes(item.role) === true);
-    });
+    // const filteredRoutes = routeItems.filter(item => {
+    //   return (JSON.parse(localStorage.getItem('userInfo')).Roles.includes(item.role) === true);
+    // });
 
-    const menu = filteredRoutes.map((route, index) => {
-      return (route.component) ? (
-        <Route
-          key={index}
-          path={route.path}
-          exact={route.exact}
-          name={route.name}
-          render={props => (
-            <route.component {...props} />
-          )} />
-      ) : (null);
-    });
-
-    // const menu = routes.map((route, index) => {
+    // const menu = filteredRoutes.map((route, index) => {
     //   return (route.component) ? (
     //     <Route
     //       key={index}
@@ -71,6 +58,19 @@ class AdminLayout extends Component {
     //       )} />
     //   ) : (null);
     // });
+
+    const menu = mainRoutes?.map((route, index) => {
+      return (route.component) ? (
+        <Route
+          key={index}
+          path={route.path}
+          exact={route.exact}
+          name={route.name}
+          render={props => (
+            <route.component {...props} />
+          )} />
+      ) : (null);
+    });
 
     return (
       <>
@@ -86,7 +86,7 @@ class AdminLayout extends Component {
                     <Suspense fallback={<Loader />}>
                       <Switch>
                         {menu}
-                        <Redirect exact from="/" to={this.props.defaultPath} />
+                        {/* <Redirect exact from="/" to={this.props?.defaultPath} /> */}
                         <Route><NotFound /></Route>
                       </Switch>
                     </Suspense>
@@ -103,11 +103,11 @@ class AdminLayout extends Component {
 
 const mapStateToProps = state => {
   return {
-    defaultPath: state.navigation.defaultPath,
+    // defaultPath: state.navigation?.defaultPath,
     // isFullScreen: state.isFullScreen,
-    collapseMenu: state.navigation.collapseMenu,
-    configBlock: state.navigation.configBlock,
-    layout: state.navigation.layout
+    // collapseMenu: state.navigation.collapseMenu,
+    // configBlock: state.navigation.configBlock,
+    // layout: state?.navigation?.layout
   }
 };
 
